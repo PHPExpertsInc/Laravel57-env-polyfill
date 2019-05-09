@@ -34,7 +34,7 @@ It also includes 100% unit test code .
 Via Composer
 
 ```bash
-composer require 0.0.1/laravel-env-shim
+composer require 0.0.0/laravel-env-shim
 ```
 
 ## Usage
@@ -46,17 +46,14 @@ $foo = \env('foo'); // 'bar'
 
 # Use cases
 
-PHPExperts\RESTSpeaker\Tests\HTTPSpeaker  
- ✔ Works as a Guzzle proxy
-
-PHPExperts\Laravel57EnvPolyfill\Tests\Env
- ✔ Env
- ✔ Env with quotes
- ✔ Env true
- ✔ Env false
- ✔ Env empty
- ✔ Env null
- ✔ Value
+PHPExperts\Laravel57EnvPolyfill\Tests\Env  
+ ✔ Env  
+ ✔ Env with quotes  
+ ✔ Env true  
+ ✔ Env false  
+ ✔ Env empty  
+ ✔ Env null  
+ ✔ Value  
  ✔ Env will use default value if needed
 
 ## Testing
