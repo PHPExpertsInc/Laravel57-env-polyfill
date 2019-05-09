@@ -24,17 +24,18 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "funkjedi/composer-include-files": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "6.*"
     },
-    "autoload": {
-        "files": [
-            "src/env-shim.php"
-        ]
-    },
     "autoload-dev": {
         "psr-4": { "PHPExperts\\" : "tests/" }
+    },
+    "extra": {
+        "include_files": [
+            "src/env-shim.php"
+        ]
     }
 }
