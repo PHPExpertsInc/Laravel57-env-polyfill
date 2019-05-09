@@ -1,7 +1,7 @@
 # Laravel 5.7 env() Polyfill
 
 [![TravisCI](https://travis-ci.org/phpexpertsinc/Laravel57-env-polyfill.svg?branch=master)](https://travis-ci.org/phpexpertsinc/Laravel57-env-polyfill)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/993dd11fb863ad401c0c/test_coverage)](https://codeclimate.com/github/phpexpertsinc/Lararvel57-env-polyfill/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4055759a290cbc797f5f/test_coverage)](https://codeclimate.com/github/phpexpertsinc/Laravel57-env-polyfill/test_coverage)
 
 With the introduction of Laravel 5.8, they broke the essential `env()` function 
 by changing it from reading from/writing to environment variables to only using 

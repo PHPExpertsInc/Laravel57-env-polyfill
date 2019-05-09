@@ -29,10 +29,10 @@ namespace AAutoloadFirst\PHPExperts
      * Copyright (c) 2018 Taylor Otwell
      *
      * @param string $key
-     * @param string $default
+     * @param mixed $default
      * @return array|bool|false|string|int|float
      */
-    function env(string $key, string $default='')
+    function env($key, $default = null)
     {
         $value = getenv($key);
 
@@ -81,7 +81,7 @@ namespace AAutoloadFirst\PHPExperts
 namespace {
     // Shim for non-Laravel projects where env() is not present.
     if (!function_exists('env')) {
-        function env(string $key, string $default='')
+        function env($key, $default = null)
         {
             return \AAutoloadFirst\PHPExperts\env($key, $default);
         }
