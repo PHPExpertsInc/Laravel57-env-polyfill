@@ -1,5 +1,5 @@
 {
-    "name": "0.0.1/laravel-env-shim",
+    "name": "0.0.0/laravel-env-shim",
     "description": "Backward compatible support for Laravel's pre-5.8 env() function.",
     "keywords": [
         "laravel",
