@@ -3,6 +3,13 @@
 [![TravisCI](https://travis-ci.org/phpexpertsinc/Laravel57-env-polyfill.svg?branch=master)](https://travis-ci.org/phpexpertsinc/Laravel57-env-polyfill)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4055759a290cbc797f5f/test_coverage)](https://codeclimate.com/github/phpexpertsinc/Laravel57-env-polyfill/test_coverage)
 
+## Benefits
+
+* Works with *any* package, even non-Laravel ones (it was my secondary reason)
+* You no longer have to fear Laravel just going one day "Oops! We're not going to read from the environment anymore! Too bad!" on a non-major release.
+
+## Backstory
+
 With the introduction of Laravel 5.8, they broke the essential `env()` function 
 by changing it from reading from/writing to environment variables to only using 
 the global `$_SERVER` array, which is totally useless in console-based apps.
@@ -34,7 +41,7 @@ It also includes 100% unit test code .
 Via Composer
 
 ```bash
-composer require 0.0.0/laravel-env-shim
+composer require phpexperts/laravel-env-polyfill
 ```
 
 ## Usage
