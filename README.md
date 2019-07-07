@@ -51,6 +51,14 @@ putenv('foo=bar');
 $foo = \env('foo'); // 'bar'
 ```
 
+and
+
+```php
+if (in_array(SomeTrait::class, class_uses_recursive($this)) {
+    // The class or its child it's being called from uses SomeTrait.
+}
+```
+
 # Use cases
 
 PHPExperts\Laravel57EnvPolyfill\Tests\Env  
