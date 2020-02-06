@@ -90,6 +90,7 @@ namespace {
     if (! function_exists('class_uses_recursive')) {
         /**
          * Returns all traits used by a class, its parent classes and trait of their traits.
+         * Copyright (c) 2018 Taylor Otwell
          *
          * @param  object|string  $class
          * @return array
@@ -113,6 +114,7 @@ namespace {
     if (! function_exists('trait_uses_recursive')) {
         /**
          * Returns all traits used by a trait and its traits.
+         * Copyright (c) 2018 Taylor Otwell
          *
          * @param  string  $trait
          * @return array
