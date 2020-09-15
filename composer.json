@@ -1,5 +1,5 @@
 {
-    "name": "phpexperts/laravel-env-polyfill",
+    "name": "0.0.0/laravel-env-shim",
     "description": "Backward compatible support for Laravel's pre-5.8 env() function.",
     "keywords": [
         "laravel",
@@ -26,13 +26,19 @@
     "require": {
         "php": ">=7.0",
         "0.0.0/composer-include-files": "^1.0",
-        "vlucas/phpdotenv": "^4.1"
+        "vlucas/phpdotenv": "^5.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "6.*"
+        "phpunit/phpunit": "9.*",
+        "phpexperts/dockerize-php8": "^1.0"
     },
     "autoload-dev": {
         "psr-4": { "PHPExperts\\" : "tests/" }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.0"
+        }
     },
     "extra": {
         "include_files": [
