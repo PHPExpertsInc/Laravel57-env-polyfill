@@ -3,7 +3,7 @@
 /**
  * This file is part of RESTSpeaker, a PHP Experts, Inc., Project.
  *
- * Copyright © 2019 PHP Experts, Inc.
+ * Copyright © 2019-2021 PHP Experts, Inc.
  * Author: Theodore R. Smith <theodore@phpexperts.pro>
  *  GPG Fingerprint: 4BF8 2613 1C34 87AC D28F  2AD8 EB24 A91D D612 5690
  *  https://www.phpexperts.pro/
@@ -24,7 +24,7 @@ namespace AAutoloadFirst\PHPExperts
      * See https://github.com/laravel/framework/issues/27949
      *
      * Gets the value of an environment variable.
-     * Source is taken from 
+     * Source is taken from
      *    https://github.com/laravel/framework/blob/5.7/src/Illuminate/Support/helpers.php
      * Copyright (c) 2018 Taylor Otwell
      *
@@ -34,7 +34,11 @@ namespace AAutoloadFirst\PHPExperts
      */
     function env($key, $default = null)
     {
-        $value = getenv($key);
+        if (array_key_exists($key, $_ENV)) {
+            $value = $_ENV[$key];
+        } else {
+            $value = getenv($key);
+        }
 
         if ($value === false) {
             return value($default);
@@ -65,7 +69,7 @@ namespace AAutoloadFirst\PHPExperts
     /**
      * Return the default value of the given value.
      *
-     * Source is taken from 
+     * Source is taken from
      *    https://github.com/laravel/framework/blob/5.7/src/Illuminate/Support/helpers.php
      * Copyright (c) 2018 Taylor Otwell
      *
