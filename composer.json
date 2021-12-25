@@ -25,24 +25,23 @@
     ],
     "require": {
         "php": ">=7.0",
-        "0.0.0/composer-include-files": "^1.0",
-        "vlucas/phpdotenv": "^5.2"
+        "0.0.0/composer-include-files": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "9.*",
-        "phpexperts/dockerize-php8": "^1.0"
+        "phpexperts/dockerize": "*"
     },
     "autoload-dev": {
         "psr-4": { "PHPExperts\\" : "tests/" }
-    },
-    "config": {
-        "platform": {
-            "php": "7.3.0"
-        }
     },
     "extra": {
         "include_files": [
             "src/env-shim.php"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "0.0.0/composer-include-files": true
+        }
     }
 }
