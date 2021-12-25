@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
 /**
- * This file is part of RESTSpeaker, a PHP Experts, Inc., Project.
+ * This file is part of Laravel 5.7 env() polyfill, a PHP Experts, Inc., project.
  *
  * Copyright © 2019-2022 PHP Experts, Inc.
  * Author: Theodore R. Smith <theodore@phpexperts.pro>
  *  GPG Fingerprint: 4BF8 2613 1C34 87AC D28F  2AD8 EB24 A91D D612 5690
  *  https://www.phpexperts.pro/
- *  https://github.com/phpexpertsinc/RESTSpeaker
+ *  https://github.com/PHPExpertsInc/Laravel57-env-polyfill
  *
  * This file is licensed under the MIT License.
  */

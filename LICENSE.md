@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2019 PHP Experts, Inc.
+Copyright (c) 2019-2022 PHP Experts, Inc.
 Includes work by:
    Copyright (c) 2018 Taylor Otwell
 

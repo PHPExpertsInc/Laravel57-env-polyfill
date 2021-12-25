@@ -28,8 +28,12 @@
         "0.0.0/composer-include-files": "*"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "*",
         "phpunit/phpunit": "9.*",
-        "phpexperts/dockerize": "*"
+        "phpexperts/dockerize": "*",
+        "phpexperts/skeleton": "*",
+        "phpstan/phpstan": "*",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload-dev": {
         "psr-4": { "PHPExperts\\" : "tests/" }
