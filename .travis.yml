@@ -4,6 +4,7 @@ php:
   - '7.3'
   - '7.4'
   - '8.0'
+  - '8.1'
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -14,6 +15,9 @@ before_script:
 
 script:
   - mkdir -p build/logs
+  - php vendor/bin/phpcs -s --standard=psr12-modded.xml src
+  - php vendor/bin/phpcs -s --standard=PSR1 tests
+  - php vendor/bin/phpstan analyze --level 1 src
   - vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
 
 after_script:

@@ -1,0 +1,7 @@
+.env
+composer.lock
+/.php-cs-fixer.cache
+/.phpunit*
+/coverage
+/vendor
+/.idea
