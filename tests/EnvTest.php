@@ -95,6 +95,5 @@ class EnvTest extends TestCase
 
         putenv('empty=');
         self::assertEquals('', env('empty', 'default'));
-
     }
 }
