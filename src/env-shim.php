@@ -14,6 +14,9 @@
 
 namespace AAutoloadFirst\PHPExperts
 {
+
+    use Dotenv\Dotenv;
+
     /**
      * This is a shim to make Laravel 5.8's env() as
      * backward compatible as possible with pre-5.8.
@@ -34,6 +37,8 @@ namespace AAutoloadFirst\PHPExperts
      */
     function env($key, $default = null)
     {
+        static $dotenv;
+
         if (array_key_exists($key, $_ENV)) {
             $value = $_ENV[$key];
         } else {
@@ -41,6 +46,14 @@ namespace AAutoloadFirst\PHPExperts
         }
 
         if ($value === false) {
+            $envPath = realpath(__DIR__ . '/../../../../');
+            $envPath = $envPath === '/' ? getcwd() : $envPath;
+            if (!$dotenv && is_readable("$envPath/.env") && class_exists(Dotenv::class)) {
+                $dotenv = Dotenv::createImmutable($envPath);
+                $dotenv->load();
+
+                return env($key, $default);
+            }
             return value($default);
         }
 

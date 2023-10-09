@@ -69,7 +69,9 @@ PHPExperts\Laravel57EnvPolyfill\Tests\Env
  ✔ Env empty  
  ✔ Env null  
  ✔ Value  
- ✔ Env will use default value if needed
+ ✔ Env will use default value if needed  
+ ✔ Will load vlucas/phpdot if a .env is present.  
+ ✔ Will not load vlucas/phpdotenv if a .env is not present.
 
 ## Testing
 

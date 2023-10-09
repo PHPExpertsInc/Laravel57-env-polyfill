@@ -96,4 +96,36 @@ class EnvTest extends TestCase
         putenv('empty=');
         self::assertEquals('', env('empty', 'default'));
     }
+
+    private function getEnvFileLocation(): string
+    {
+        return realpath(__DIR__ . '/../') . '/.env';
+    }
+
+    /** @testdox Will load vlucas/phpdot if a .env is present. */
+    public function testWillLoadPhpDotEnvIfDotEnvIsPresent()
+    {
+        if (is_readable($this->getEnvFileLocation())) {
+            unlink($this->getEnvFileLocation());
+        }
+
+        $this->assertNull(env('HELLO'));
+        file_put_contents($this->getEnvFileLocation(), 'HELLO=123456');
+
+        $this->assertEquals('123456', env('HELLO'));
+
+    }
+
+    /** @testdox Will not load vlucas/phpdotenv if a .env is not present. */
+    public function testWillNotLoadPhpDotEnvIfDotEnvIsNotPresent()
+    {
+        if (is_readable($this->getEnvFileLocation())) {
+            unlink($this->getEnvFileLocation());
+        }
+
+        $this->assertNull(env('HELLO2'));
+        putenv('HELLO2=12345');
+        $this->assertEquals('12345', env('HELLO2'));
+        putenv('HELLO2');
+    }
 }
