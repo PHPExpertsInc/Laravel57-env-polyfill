@@ -1,6 +1,6 @@
 {
-    "name": "0.0.0/laravel-env-shim",
-    "description": "Backward compatible support for Laravel's pre-5.8 env() function.",
+    "name": "phpexperts/env",
+    "description": "Use Laravel's pre-5.8 env() function in your non-Laravel projects.",
     "keywords": [
         "laravel",
         "5.7",
